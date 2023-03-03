@@ -7,6 +7,7 @@ on:
     branch: [main, test]
 
 # top-level callout of tasks
+jobs:
   build:
     name: Build and Deploy
     runs-on: ubuntu-latest
