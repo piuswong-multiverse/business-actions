@@ -1,0 +1,22 @@
+# show workflows
+name: Test and Deploy
+
+# define when triggered
+on:
+  push:
+    branch: [main]
+
+# top-level callout of tasks
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+
+    - run: npm ci
+    - run: npm test
