@@ -20,6 +20,13 @@ docker run -p 3000:3000 business-contacts
 docker ps
 # stop a container
 docker stop <container-id>
+# run container, --name [name it]
+# ... --rm [remove it after it's done] 
+# ... -d [but keep terminal open]
+# ... -p [and expose port]
+# ... [refer to Docker image]
+docker container run --name business-solutions-1 --rm -d -p 3000:3000 business-solutions
+
 ```
 
 ## Apps
